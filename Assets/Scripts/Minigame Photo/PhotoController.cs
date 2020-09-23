@@ -10,7 +10,6 @@ public class PhotoController : MinigameController
     void Start()
     {
         photoPieces = GameObject.FindObjectsOfType<PhotoPiece>();
-        Debug.Log("Pieces: "+ photoPieces.Length);
     }
 
     // Update is called once per frame
@@ -23,6 +22,6 @@ public class PhotoController : MinigameController
             }
         }
 
-        CompleteMinigame();
+        CompleteMinigame("photo");
     }
 }

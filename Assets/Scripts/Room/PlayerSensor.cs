@@ -16,12 +16,13 @@ public class PlayerSensor : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E) && nearestGameObject){
             nearestGameObject.GetComponent<BasicInteraction>().Interact();
+            this.transform.parent.GetComponent<PlayerMovement>().SetPlayerInfo();
         }
     }
     private void OnTriggerEnter(Collider other)
     {
         BasicInteraction bi = other.gameObject.GetComponent<BasicInteraction>();
-        if(bi){
+        if(bi && bi.enable){
             AddObject(other.gameObject);
         }
     }

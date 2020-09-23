@@ -5,8 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MinigameController : MonoBehaviour
 {
-    protected virtual void CompleteMinigame(){
-        GameObject.FindObjectOfType<GameProgress>().shellsMinigame = true;
+    protected virtual void CompleteMinigame(string minigame){
+        switch(minigame){
+            case "shell":
+                GameObject.FindObjectOfType<GameProgress>().shellsMinigame = true;
+                break;
+            case "photo":
+                GameObject.FindObjectOfType<GameProgress>().photosMinigame = true;
+                break;
+            case "hockey":
+                GameObject.FindObjectOfType<GameProgress>().hockeyMinigame = true;
+                break;
+            case "map":
+                GameObject.FindObjectOfType<GameProgress>().mapMinigame = true;
+                break;
+        }
+
         //Temporal
         SceneManager.LoadScene("Test-Ivan");
         return;

@@ -10,25 +10,23 @@ public class RoomController : MonoBehaviour
 
     void Awake(){
         gp = GameObject.FindObjectOfType<GameProgress>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        ReadGameProgress();
+        if(gp){
+            ReadGameProgress();
+        }
     }
 
     void ReadGameProgress(){
         if(gp.hockeyMinigame){
-            Destroy(keyObjects[0].GetComponent<KeyObject>());
+            keyObjects[0].GetComponent<KeyObject>().enable = false;
         }
         if(gp.shellsMinigame){
-            Destroy(keyObjects[1].GetComponent<KeyObject>());
+            keyObjects[1].GetComponent<KeyObject>().enable = false;
         }
         if(gp.mapMinigame){
-            Destroy(keyObjects[2].GetComponent<KeyObject>());
+            keyObjects[2].GetComponent<KeyObject>().enable = false;
         }
         if(gp.photosMinigame){
-            Destroy(keyObjects[3].GetComponent<KeyObject>());
+            keyObjects[3].GetComponent<KeyObject>().enable = false;
         }
     }
 }

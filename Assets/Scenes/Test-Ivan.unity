@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c98226196cba644a9e478a62c7a8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enable: 1
   sceneName: MinigameShells
 --- !u!135 &273204932
 SphereCollider:
@@ -430,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c98226196cba644a9e478a62c7a8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enable: 1
   sceneName: 
 --- !u!135 &333280648
 SphereCollider:
@@ -658,6 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c98226196cba644a9e478a62c7a8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enable: 1
   sceneName: 
 --- !u!135 &959848217
 SphereCollider:
@@ -1367,7 +1370,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c98226196cba644a9e478a62c7a8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  enable: 1
+  sceneName: MinigamePhoto
 --- !u!1 &1792200911
 GameObject:
   m_ObjectHideFlags: 0

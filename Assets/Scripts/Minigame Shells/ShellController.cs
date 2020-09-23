@@ -42,7 +42,8 @@ public class ShellController : MinigameController
     void NextLevel(){
         currentLevel++;
         if(currentLevel == 3){            
-            CompleteMinigame();
+            CompleteMinigame("shell");
+            return;
         }
 
         //We add the shells
