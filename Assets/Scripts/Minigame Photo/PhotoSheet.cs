@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shell : MonoBehaviour
+public class PhotoSheet : MonoBehaviour
 {
-    public int id; 
+    public int id;
 }

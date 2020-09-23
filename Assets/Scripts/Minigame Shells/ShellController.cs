@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ShellController : MonoBehaviour
+public class ShellController : MinigameController
 {
     public GameObject[] shells;
     public int currentLevel;
@@ -42,11 +41,8 @@ public class ShellController : MonoBehaviour
 
     void NextLevel(){
         currentLevel++;
-        if(currentLevel == 3){
-            GameObject.FindObjectOfType<GameProgress>().shellsMinigame = true;
-            //Temporal
-            SceneManager.LoadScene("Test-Ivan");
-            return;
+        if(currentLevel == 3){            
+            CompleteMinigame();
         }
 
         //We add the shells
