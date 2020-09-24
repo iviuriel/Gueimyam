@@ -40,11 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<< HEAD
         m_Texture: {fileID: 2800000, guid: 1491c95c5a641b2409c44d9c167af9d9, type: 3}
-=======
-        m_Texture: {fileID: 0}
->>>>>>> laura
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -70,10 +66,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-<<<<<<< HEAD
     - _OutlineWidth: 1
-=======
->>>>>>> laura
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -83,12 +76,7 @@ Material:
     - _enable: 0
     - _outline_thickness: 0.05
     m_Colors:
-<<<<<<< HEAD
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 1, g: 0, b: 0, a: 1}
-=======
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
->>>>>>> laura
     - _outline_color: {r: 1, g: 0, b: 0.08050728, a: 1}

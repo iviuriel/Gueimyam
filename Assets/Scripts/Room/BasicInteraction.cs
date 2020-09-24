@@ -5,7 +5,7 @@ using UnityEngine;
 public class BasicInteraction : MonoBehaviour
 {
     public bool enable = true;
-    public virtual void Interact(){
+    public virtual void Interact(GameObject sender){
         Debug.Log("hola soy un objeto");
     }
 }

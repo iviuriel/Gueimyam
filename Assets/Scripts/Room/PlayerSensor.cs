@@ -15,8 +15,7 @@ public class PlayerSensor : MonoBehaviour
         UpdateActiveItem();
 
         if(Input.GetKeyDown(KeyCode.E) && nearestGameObject){
-            nearestGameObject.GetComponent<BasicInteraction>().Interact();
-            this.transform.parent.GetComponent<PlayerMovement>().SetPlayerInfo();
+            nearestGameObject.GetComponent<BasicInteraction>().Interact(transform.parent.gameObject);
         }
     }
     private void OnTriggerEnter(Collider other)
