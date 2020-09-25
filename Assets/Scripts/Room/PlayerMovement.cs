@@ -55,16 +55,34 @@ public class PlayerMovement : MonoBehaviour
     //---------------------------------------
     private Rigidbody rigidBody;
 
+    private GameProgress gameProgress;
+
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody>();
         cameraPivot = transform.GetChild(0);
+        gameProgress = GameObject.FindObjectOfType<GameProgress>();
+
+        if(gameProgress){
+            PlayerInfo pi = gameProgress.GetPlayerInfo();
+            if(pi != null){
+                transform.position = pi.position;
+
+                transform.rotation = Quaternion.Euler(0, pi.rotation.y, 0);
+                cameraPivot.localRotation = Quaternion.Euler(pi.cameraRotation.x, 0, 0);
+                
+                startRotationVertical = pi.cameraRotation.x;
+                startRotationHorizontal = pi.rotation.y;
+
+            }
+
+        }
     }
     void Start()
-    {
+    {      
         localRotation.y = startRotationVertical;
         localRotation.x = startRotationHorizontal;
-        ableToRotate = true;
+        ableToRotate = true;        
     }
 
     // Update is called once per frame
@@ -104,5 +122,11 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveOnLocal = transform.TransformDirection(new Vector3(movHorValue, 0f, movVertValue));
         Vector3 movement = moveOnLocal * speed * Time.deltaTime;
         rigidBody.MovePosition(rigidBody.position + movement);
+    }
+
+    public void SetPlayerInfo(){
+        if(gameProgress){
+            gameProgress.SetPlayerInfo(transform.position, transform.rotation.eulerAngles, cameraPivot.localPosition, cameraPivot.localRotation.eulerAngles);
+        }
     }
 }
