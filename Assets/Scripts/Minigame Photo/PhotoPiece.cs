@@ -17,8 +17,8 @@ public class PhotoPiece : MonoBehaviour
     void Start()
     {
         int rotMultiplier = UnityEngine.Random.Range(0, 4);
-        int initialRotation = 90*rotMultiplier;
-        Debug.Log(initialRotation);
+        //int initialRotation = 90*rotMultiplier;
+        int initialRotation = 0;
         transform.rotation = Quaternion.Euler(0, 0, initialRotation);
 
         animator.Play("Start"+ initialRotation);
