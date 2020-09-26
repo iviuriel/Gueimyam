@@ -7,6 +7,13 @@ public class PlayerSensor : MonoBehaviour
     private List<GameObject> gameObjectsFound;
     private GameObject nearestGameObject;
 
+    private LineRenderer lineRenderer;
+
+    public Vector3 lineOrigin;
+
+    void Awake(){
+        lineRenderer = GetComponent<LineRenderer>();
+    }
     void Start(){
         gameObjectsFound = new List<GameObject>();
     }
@@ -42,8 +49,8 @@ public class PlayerSensor : MonoBehaviour
     {
         gameObjectsFound.Remove(g);
         if(g == nearestGameObject){
-            Material mat = g.GetComponent<MeshRenderer>().material;
-            mat.SetFloat("_OutlineWidth", 1);
+            lineRenderer.SetPosition(0, Vector3.zero);
+            lineRenderer.SetPosition(1, Vector3.zero);
         }
     }
     
@@ -53,8 +60,8 @@ public class PlayerSensor : MonoBehaviour
 
         //Deletes the current outline
         if(nearestGameObject){
-            Material mat = nearestGameObject.GetComponent<MeshRenderer>().material;
-            mat.SetFloat("_OutlineWidth", 1);
+            lineRenderer.SetPosition(0, Vector3.zero);
+            lineRenderer.SetPosition(1, Vector3.zero);
         } 
         if(gameObjectsFound.Count > 0){
             foreach(GameObject go in gameObjectsFound)
@@ -69,8 +76,8 @@ public class PlayerSensor : MonoBehaviour
             } 
 
             //Add the outline to the current object
-            Material mat = nearestGameObject.GetComponent<MeshRenderer>().material;
-            mat.SetFloat("_OutlineWidth", 1.15f);           
+            lineRenderer.SetPosition(0, transform.position + lineOrigin);           
+            lineRenderer.SetPosition(1, nearestGameObject.transform.position);           
         }
     }
 }

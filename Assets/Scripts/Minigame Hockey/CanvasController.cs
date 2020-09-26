@@ -9,6 +9,6 @@ public class CanvasController : MonoBehaviour
     }
 
     public void CompleteGame(){
-        GameObject.FindObjectOfType<HockeyController>().CompleteMinigame("hockey");
+        GameObject.FindObjectOfType<HockeyController>().ShowFinalText();
     }
 }

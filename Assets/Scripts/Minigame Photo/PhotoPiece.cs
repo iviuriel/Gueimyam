@@ -38,7 +38,7 @@ public class PhotoPiece : MonoBehaviour
                 //calculate the position based on percentage of mouse/screen
                 Vector3 mousePosition = Input.mousePosition;
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-                transform.localPosition = new Vector3(worldPosition.x, worldPosition.y, -1f);
+                transform.localPosition = new Vector3(worldPosition.x, worldPosition.y, -2f);
             }
             if (Input.GetMouseButtonUp(0))
             {              
@@ -50,7 +50,7 @@ public class PhotoPiece : MonoBehaviour
                     Transform t = hit.collider.transform;
                     PhotoSheet ps = t.GetComponent<PhotoSheet>();
                     if(!ps.used){
-                        transform.position = t.position;
+                        transform.position = t.position + new Vector3(0f, 0f, -1f);
                         sheet = t;
                         sheet.GetComponent<PhotoSheet>().used = true;
                     }else{

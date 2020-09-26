@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MinigameController : MonoBehaviour
 {
-    public virtual void CompleteMinigame(string minigame){
-        switch(minigame){
+    public string nameMinigame;
+
+    public EndMinigameObject endObject;
+    public virtual void CompleteMinigame(){
+        switch(nameMinigame){
             case "shell":
                 GameObject.FindObjectOfType<GameProgress>().shellsMinigame = true;
                 break;
@@ -24,5 +27,9 @@ public class MinigameController : MonoBehaviour
         //Temporal
         SceneManager.LoadScene("Test-Ivan");
         return;
+    }
+
+    public virtual void ShowFinalText(){
+        endObject.Interact(this.gameObject);
     }
 }

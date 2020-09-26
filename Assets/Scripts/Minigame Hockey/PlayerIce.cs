@@ -13,13 +13,8 @@ public class PlayerIce : MonoBehaviour
     private bool movingRight;
     private Animator rotationAnimator;
     private Animator moveAnimator;
-    private StateStep state;
     private HockeyController hockeyController;
     public bool finish;
-    enum StateStep{
-        ICE = 0,
-        SNOW = 1,
-    }
     void Awake(){
         rotationAnimator = GetComponent<Animator>();
         moveAnimator = transform.GetChild(1).GetComponent<Animator>();
@@ -29,7 +24,6 @@ public class PlayerIce : MonoBehaviour
     {
         slicing = false;
         movingRight = true;
-        state = StateStep.SNOW;
         moveAnimator.speed = 0;
         finish = false;
     }
@@ -131,8 +125,7 @@ public class PlayerIce : MonoBehaviour
                                 snowStepped.GetComponent<BoxCollider>().enabled = true;
                             }
                             snowStepped = hit.collider.transform;
-                            snowStepped.GetComponent<BoxCollider>().enabled = false;  
-                            state = StateStep.SNOW;  
+                            snowStepped.GetComponent<BoxCollider>().enabled = false;    
                             //moveAnimator.speed = 0;    
                         } 
                         else if (hit.collider.CompareTag("Ice"))
@@ -141,7 +134,6 @@ public class PlayerIce : MonoBehaviour
                             if(snowStepped){
                                 snowStepped.GetComponent<BoxCollider>().enabled = true;
                             }
-                            state = StateStep.ICE;
                             //moveAnimator.speed = 0;
                         }                  
                         else if (hit.collider.CompareTag("Exit"))
