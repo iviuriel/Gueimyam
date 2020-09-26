@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MinigameController : MonoBehaviour
 {
-    protected virtual void CompleteMinigame(string minigame){
+    public virtual void CompleteMinigame(string minigame){
         switch(minigame){
             case "shell":
                 GameObject.FindObjectOfType<GameProgress>().shellsMinigame = true;

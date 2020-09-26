@@ -9,6 +9,7 @@ public class PhotoPiece : MonoBehaviour
     private bool mouseOver;
     private Transform sheet;
     private Animator animator;
+    private Vector3 origin;
 
     void Awake(){
         animator = GetComponent<Animator>();
@@ -37,7 +38,7 @@ public class PhotoPiece : MonoBehaviour
                 //calculate the position based on percentage of mouse/screen
                 Vector3 mousePosition = Input.mousePosition;
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-                transform.localPosition = new Vector3(worldPosition.x, worldPosition.y, 0f);
+                transform.localPosition = new Vector3(worldPosition.x, worldPosition.y, -1f);
             }
             if (Input.GetMouseButtonUp(0))
             {              
@@ -47,8 +48,17 @@ public class PhotoPiece : MonoBehaviour
                 if(hit.collider != null)
                 {
                     Transform t = hit.collider.transform;
-                    transform.position = t.position;
-                    sheet = t;
+                    PhotoSheet ps = t.GetComponent<PhotoSheet>();
+                    if(!ps.used){
+                        transform.position = t.position;
+                        sheet = t;
+                        sheet.GetComponent<PhotoSheet>().used = true;
+                    }else{
+                        if(sheet){
+                            sheet.GetComponent<PhotoSheet>().used = true;                            
+                        }
+                        transform.position = origin;
+                    }
                 }else{
                     sheet = null;
                 }
@@ -65,6 +75,13 @@ public class PhotoPiece : MonoBehaviour
     private void OnMouseDrag()
     {
         isClicked = true;        
+    }
+
+    private void OnMouseDown(){
+        if(sheet){
+            sheet.GetComponent<PhotoSheet>().used = false;
+        }
+        origin = transform.position;
     }
 
     private void OnMouseEnter(){

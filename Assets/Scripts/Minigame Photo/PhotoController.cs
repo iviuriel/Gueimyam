@@ -22,6 +22,6 @@ public class PhotoController : MinigameController
             }
         }
 
-        CompleteMinigame("photo");
+        GetComponent<Animator>().Play("ShowCompletePhoto");
     }
 }

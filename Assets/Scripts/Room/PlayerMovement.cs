@@ -65,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
     private float movVertValue;
     private float movHorValue;
     private bool movingRight; //Si se mueve hacia la derecha
-    private bool wasMovingRight; //Si se estaba moviendo hacia la derecha
 
     [Header("Movement")]
     [Tooltip("Speed of the main character")]
@@ -115,7 +114,6 @@ public class PlayerMovement : MonoBehaviour
         percentageRotation = 0;   
 
         movingRight = true;
-        wasMovingRight = true;
     }
 
     // Update is called once per frame

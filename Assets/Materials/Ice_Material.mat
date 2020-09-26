@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Snow_Material
+  m_Name: Ice_Material
   m_Shader: {fileID: -6465566751694194690, guid: 2a7e2493fe46c4a43ab16a67e213c2d2,
     type: 3}
   m_ShaderKeywords: 
@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_745D0432:
-        m_Texture: {fileID: 2800000, guid: efe79416e34b46041ab4bf8b5170a999, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09f636318d28a604986deacef3a8f050, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_8DC71C40:
