@@ -7,6 +7,8 @@ public class RoomController : MonoBehaviour
 {
     public GameObject[] keyObjects;
 
+    public Color[] lightColors;
+
     public Transform corchoCerca;
 
     public Transform corchoObject;
@@ -18,12 +20,17 @@ public class RoomController : MonoBehaviour
 
     private GameProgress gp;
 
+    [Header("Polaroid")]
+    public SecondaryObject photoBbs;
+    private bool photoBabyShown = false;
+
     private bool ableToClick = false;
     void Awake(){
         gp = GameObject.FindObjectOfType<GameProgress>();
         if(gp){
             ReadGameProgress();
             UpdateCorcho();
+            UpdateLights();
         }
     }
 
@@ -42,6 +49,10 @@ public class RoomController : MonoBehaviour
             gp.isFirstTime = false;
             StartCoroutine(ActivateScripts());
             ableToClick = false;
+        }
+
+        if(!photoBabyShown){
+            CheckObjectsUsed();
         }
     }
 
@@ -92,7 +103,55 @@ public class RoomController : MonoBehaviour
         if(gp.photoBaby){
             corchoCerca.GetChild(0).GetChild(4).GetComponent<Image>().color = Color.white;
             corchoObject.GetChild(4).GetComponent<SpriteRenderer>().color = Color.white;
+            photoBabyShown = true;
         }
+    }
+
+    void UpdateLights(){
+        Transform player = GameObject.FindObjectOfType<PlayerMovement>().transform;
+        Light foco1 = player.GetChild(3).GetComponent<Light>();
+        Light foco2 = player.GetChild(5).GetComponent<Light>();
+
+        int contador = 0;
+        if(gp.hockeyMinigame){
+            contador++;
+        }
+        if(gp.shellsMinigame){
+            contador++;
+        }
+        if(gp.mapMinigame){
+            contador++;
+        }
+        if(gp.photosMinigame){
+            contador++;
+        }
+
+        foco1.color = lightColors[contador];
+        foco2.color = lightColors[contador];
+    }
+
+    void CheckObjectsUsed(){
+        SecondaryObject[] objects = GameObject.FindObjectsOfType<SecondaryObject>();
+
+        //Check objetos usados, si alguno no está usado return
+        foreach(SecondaryObject s in objects){
+            if(s.gameObject.CompareTag("FotoBebes")){
+                continue;
+            }
+            if(!s.IsUsedOnce()){
+                return;
+            }
+        }
+
+        //Si algun nivel no se ha jugado return
+        if(!gp.hockeyMinigame || !gp.shellsMinigame || !gp.photosMinigame || !gp.mapMinigame ){
+            return;
+        }
+
+        gp.photoBaby = true;
+        photoBbs.Interact(FindObjectOfType<PlayerMovement>().gameObject);
+
+        UpdateCorcho();
     }
 
     IEnumerator ActivateScripts(){
@@ -104,7 +163,7 @@ public class RoomController : MonoBehaviour
         
     }
     IEnumerator DelayInitialClick(){
-        yield return new  WaitForSeconds(2f);
+        yield return new  WaitForSeconds(1.5f);
 
         ableToClick = true;
         

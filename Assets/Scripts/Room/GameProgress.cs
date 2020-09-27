@@ -24,6 +24,14 @@ public class GameProgress : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
             created = true;
+
+            hockeyMinigame = false;
+            mapMinigame = false;
+            shellsMinigame = false;
+            photosMinigame = false;
+            photoBaby = false;
+
+            isFirstTime = true;
         }
         else
         {
@@ -34,13 +42,7 @@ public class GameProgress : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        hockeyMinigame = false;
-        mapMinigame = false;
-        shellsMinigame = false;
-        photosMinigame = false;
-        photoBaby = false;
-
-        isFirstTime = true;
+        
     }
 
     public void SetPlayerInfo(Vector3 p, Vector3 r, Vector3 cp, Vector3 cr){

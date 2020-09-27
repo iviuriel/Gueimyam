@@ -188,4 +188,12 @@ public class PlayerMovement : MonoBehaviour
             GameObject.FindObjectOfType<RoomController>().EndGame();
         }
     }
+
+    void OnEnable(){
+        moveAnimator.speed = 1;
+    }
+
+    void OnDisable(){
+        moveAnimator.speed = 0;
+    }
 }

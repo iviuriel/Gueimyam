@@ -17,6 +17,7 @@ public class CorchoObject : BasicInteraction
     private bool activated;
     private PlayerMovement pMovementRef;
     public override void Interact(GameObject sender){
+        base.Interact(sender);
         if(!activated){
             DisplayObject();
             pMovementRef = sender.GetComponent<PlayerMovement>();
@@ -54,6 +55,7 @@ public class CorchoObject : BasicInteraction
                 pMovementRef = null;
                 GetComponent<Outline>().enabled = true;
                 activated = false;
+                StartCoroutine(UsedDelay());
             }
         }
     }
@@ -82,5 +84,10 @@ public class CorchoObject : BasicInteraction
             }
             yield return new WaitForSeconds(0.01f);
         }
+    }
+
+    IEnumerator UsedDelay(){
+        yield return new WaitForSeconds(0.2f);
+        usedOnce = true;
     }
 }

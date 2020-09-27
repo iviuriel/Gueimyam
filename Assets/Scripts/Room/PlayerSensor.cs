@@ -65,6 +65,7 @@ public class PlayerSensor : MonoBehaviour
         gameObjectsFound.Remove(g);
         if(g == nearestGameObject){
             nearestGameObject.GetComponent<Outline>().OutlineMode = Outline.Mode.NoOutline;
+            nearestGameObject = null;
         }
     }
     

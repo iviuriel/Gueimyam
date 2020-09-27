@@ -56,6 +56,7 @@ public class SecondaryObject : BasicInteraction
                 pMovementRef = null;
                 GetComponent<Outline>().enabled = true;
                 activated = false;
+                StartCoroutine("UsedDelay");
             }
         }
     }
@@ -63,7 +64,7 @@ public class SecondaryObject : BasicInteraction
     void DisplayObject(){
         if(displayText.Length > 0){
             textAnimator.Play("ShowText");
-            textCoroutine = StartCoroutine(AddText());
+            textCoroutine = StartCoroutine("AddText");
         }
         if(objectToShow){
             objectAnimator.transform.GetChild(0).GetComponent<Image>().sprite = objectToShow;
@@ -90,4 +91,13 @@ public class SecondaryObject : BasicInteraction
             yield return new WaitForSeconds(0.04f);
         }
     }
+
+    IEnumerator UsedDelay(){
+        yield return new WaitForSeconds(0.2f);
+        usedOnce = true;
+    }
+
+    public void SetUIText(Text t){uiText = t;}
+    public void SetAnimatorText(Animator t){textAnimator = t;}
+    public void SetAnimatorObject(Animator t){objectAnimator = t;}
 }
