@@ -64,7 +64,8 @@ public class EndMinigameObject : BasicInteraction
             if(contador == numCharacters){
                 typing = false;
             }
-            yield return new WaitForSeconds(0.01f);
+            GetComponent<AudioSource>().Play();
+            yield return new WaitForSeconds(0.02f);
         }
     }
 }

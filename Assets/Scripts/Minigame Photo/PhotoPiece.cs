@@ -11,8 +11,11 @@ public class PhotoPiece : MonoBehaviour
     private Animator animator;
     private Vector3 origin;
 
+    private AudioSource audioSource;
+
     void Awake(){
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
@@ -39,6 +42,7 @@ public class PhotoPiece : MonoBehaviour
                 Vector3 mousePosition = Input.mousePosition;
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
                 transform.localPosition = new Vector3(worldPosition.x, worldPosition.y, -2f);
+
             }
             if (Input.GetMouseButtonUp(0))
             {              
@@ -53,6 +57,7 @@ public class PhotoPiece : MonoBehaviour
                         transform.position = t.position + new Vector3(0f, 0f, -1f);
                         sheet = t;
                         sheet.GetComponent<PhotoSheet>().used = true;
+                        audioSource.Play();
                     }else{
                         if(sheet){
                             sheet.GetComponent<PhotoSheet>().used = true;                            
@@ -66,10 +71,10 @@ public class PhotoPiece : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(1) && mouseOver)
+        /*if (Input.GetMouseButtonDown(1) && mouseOver)
         {
             animator.SetTrigger("Rotate");
-        }
+        }*/
     }
 
     private void OnMouseDrag()
@@ -82,6 +87,7 @@ public class PhotoPiece : MonoBehaviour
             sheet.GetComponent<PhotoSheet>().used = false;
         }
         origin = transform.position;
+        audioSource.Play();
     }
 
     private void OnMouseEnter(){

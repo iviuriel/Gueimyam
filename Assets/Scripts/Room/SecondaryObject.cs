@@ -13,7 +13,7 @@ public class SecondaryObject : BasicInteraction
     public Animator objectAnimator;
 
     private Coroutine textCoroutine;
-    private bool typing;
+    public bool typing;
 
     private bool activated;
     private PlayerMovement pMovementRef;
@@ -25,7 +25,6 @@ public class SecondaryObject : BasicInteraction
                 pMovementRef.enabled = false;
             }
             GetComponent<Outline>().enabled = false;
-            activated = true;
         }
     }
 
@@ -70,6 +69,7 @@ public class SecondaryObject : BasicInteraction
             objectAnimator.transform.GetChild(0).GetComponent<Image>().sprite = objectToShow;
             objectAnimator.Play("ShowObject");
         }
+        activated = true;
     }
 
     IEnumerator AddText(){
@@ -77,7 +77,7 @@ public class SecondaryObject : BasicInteraction
         int contador = 0;
         int numCharacters = displayText.Length;
         string text = "";
-        typing = true;
+        typing = true;        
 
         while(typing){
             text += displayText[contador];
@@ -86,7 +86,8 @@ public class SecondaryObject : BasicInteraction
             if(contador == numCharacters){
                 typing = false;
             }
-            yield return new WaitForSeconds(0.01f);
+            GetComponent<AudioSource>().Play();
+            yield return new WaitForSeconds(0.04f);
         }
     }
 }

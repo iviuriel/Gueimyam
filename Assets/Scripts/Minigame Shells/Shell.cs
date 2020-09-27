@@ -13,4 +13,8 @@ public class Shell : MonoBehaviour
 
     public void SetSelectedTrue(){selected = true;}
     public void SetSelectedFalse(){selected = false;}
+
+    public void PlaySandSound(){
+        GetComponent<AudioSource>().Play();
+    }
 }

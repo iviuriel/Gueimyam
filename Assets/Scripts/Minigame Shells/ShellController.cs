@@ -15,6 +15,15 @@ public class ShellController : MinigameController
     private Animator animator;
 
     public bool endGame;
+
+    [Header("SFX")]
+    public AudioSource audioSource;
+    public AudioClip clickShell;
+    public AudioClip correctShell;
+    public AudioClip wrongShell;
+    public AudioClip levelCompleted;
+    public AudioClip gameCompleted;
+
     // Start is called before the first frame update
 
     void Awake(){
@@ -37,6 +46,11 @@ public class ShellController : MinigameController
 
             CheckShells();
             if(IsEndOfLevel()){
+                if(currentLevel != 2){
+                    PlayAudio(levelCompleted);
+                }else{
+                    PlayAudio(gameCompleted);
+                }
                 NextLevel();
             }
         }
@@ -104,6 +118,7 @@ public class ShellController : MinigameController
                    }else{
                        selectedShells.Add(s);                       
                    }  
+                   PlayAudio(clickShell);
                    s.GetComponent<Animator>().SetTrigger("Toggle");                     
                 }
             }
@@ -125,14 +140,21 @@ public class ShellController : MinigameController
         if(s1.id == s2.id){
             s1.GetComponent<Animator>().SetTrigger("Correct");
             s2.GetComponent<Animator>().SetTrigger("Correct");
+            PlayAudio(correctShell);
         }else{
             s1.GetComponent<Animator>().SetTrigger("Toggle");
             s2.GetComponent<Animator>().SetTrigger("Toggle");
+            PlayAudio(wrongShell);
         }
     }
 
     bool IsEndOfLevel(){
         Transform table = transform.GetChild(currentLevel);
         return table.GetChild(1).childCount == 0;
+    }
+
+    void PlayAudio(AudioClip clip){
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }
