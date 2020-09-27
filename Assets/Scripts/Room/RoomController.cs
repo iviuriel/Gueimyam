@@ -117,6 +117,10 @@ public class RoomController : MonoBehaviour
         pMovement.enabled = s;
         pMovement.enabled = s;
 
+        if(s){
+            pSensor.StartDetecting();
+        }
+
         pMovement.transform.GetChild(2).GetComponent<Animator>().speed = 0;
     }
 
