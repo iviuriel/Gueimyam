@@ -310,7 +310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enable: 1
-  displayText: 
+  displayText: "Llevaba tiempo ahorrando para comprarla y que jug\xE1ramos hasta las
+    tantas, supongo que ahora tendr\xE9 que jugar sola\u2026"
   objectToShow: {fileID: 21300000, guid: 64fa92fe2516ad140b2ab1be967a98cd, type: 3}
   uiText: {fileID: 472593304}
   textAnimator: {fileID: 2112684153}
@@ -341,7 +342,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6b7d063da7f22c4a86b9590732ea61e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1.9
   Loop: 0
   Mute: 0
@@ -596,7 +597,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 534938589ae6b94428ec2ea0988da704,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.7069834
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 534938589ae6b94428ec2ea0988da704,
         type: 3}
@@ -606,12 +607,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 534938589ae6b94428ec2ea0988da704,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 534938589ae6b94428ec2ea0988da704,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.7072302
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 534938589ae6b94428ec2ea0988da704,
         type: 3}
@@ -621,7 +622,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 534938589ae6b94428ec2ea0988da704,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -89.98
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 534938589ae6b94428ec2ea0988da704,
         type: 3}
@@ -1130,6 +1131,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 2534964839176971238, guid: 534938589ae6b94428ec2ea0988da704, type: 3}
+--- !u!65 &583873968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583873964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011412657, y: 0.004178751, z: 0.013052679}
+  m_Center: {x: -0.0011228996, y: 0.0000000025331675, z: -0.0034736574}
 --- !u!1001 &660314984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1682,7 +1696,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6b7d063da7f22c4a86b9590732ea61e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1.9
   Loop: 0
   Mute: 0
@@ -1811,8 +1825,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enable: 1
-  displayText: 
-  objectToShow: {fileID: 21300000, guid: 32b71d1b047debd43b8d6814f44166fc, type: 3}
+  displayText: "No lo soporto, no soporto ver que yo todav\xEDa estoy aqu\xED y que
+    tu decidiste irte sin mi. Me dejaste sola en este mundo odiando cada segundo de
+    mi existencia en el."
+  objectToShow: {fileID: 21300000, guid: 3ea44336b9288e746af4e81225487735, type: 3}
   uiText: {fileID: 472593304}
   textAnimator: {fileID: 2112684153}
   objectAnimator: {fileID: 1834121962}
@@ -2331,6 +2347,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1116137460 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4695666576454475813, guid: c3e97caa34d65b144a655be6a02bb597,
+    type: 3}
+  m_PrefabInstance: {fileID: 675624436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1116137464
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116137460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4493585093827132993, guid: c3e97caa34d65b144a655be6a02bb597, type: 3}
+--- !u!65 &1116137465
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116137460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.028579663, y: 0.010405431, z: 0.0007199122}
+  m_Center: {x: -0.000025223493, y: 0.0021468971, z: 0.0078959875}
 --- !u!1001 &1130092808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3575,7 +3624,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e0453472b7c25aa4daa068eec57027df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a1dba7c2f8abb14ba2b295482cce423, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4816,7 +4865,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
 --- !u!95 &2112684153 stripped
@@ -5103,7 +5152,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6b7d063da7f22c4a86b9590732ea61e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1.9
   Loop: 0
   Mute: 0
@@ -5371,6 +5420,31 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 1536
       objectReference: {fileID: 0}
+    - target: {fileID: 6177569687062978819, guid: 2fbb4adc43562e247b693de40592eed8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.21984601
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177569687062978819, guid: 2fbb4adc43562e247b693de40592eed8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0000000016451807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177569687062978819, guid: 2fbb4adc43562e247b693de40592eed8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 6.1694283e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177569687062978819, guid: 2fbb4adc43562e247b693de40592eed8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9755346
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177569687062978819, guid: 2fbb4adc43562e247b693de40592eed8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.021480083
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fbb4adc43562e247b693de40592eed8, type: 3}
 --- !u!1001 &7963815426892792877
@@ -5560,7 +5634,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6b7d063da7f22c4a86b9590732ea61e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1.9
   Loop: 0
   Mute: 0

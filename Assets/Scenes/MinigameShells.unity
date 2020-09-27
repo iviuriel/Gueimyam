@@ -1941,7 +1941,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enable: 1
-  displayText: Frase de la foto de la playa
+  displayText: "Llev\xE1bamos tiempo queriendo ir a hacer submarinismo, al principio
+    me daba miedo, pero ver que te hac\xEDa tanta ilusi\xF3n probarlo hizo que me
+    lanzara de cabeza al mar. Despu\xE9s de vuelta a casa fuimos recogiendo conchas,
+    todav\xEDa las guardo en mi habitaci\xF3n como recuerdo de aquel d\xEDa."
   uiText: {fileID: 1274632664}
   textAnimator: {fileID: 1706202247}
 --- !u!4 &1366361831

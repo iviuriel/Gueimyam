@@ -18,6 +18,7 @@ public class RoomController : MonoBehaviour
 
     private GameProgress gp;
 
+    private bool ableToClick = false;
     void Awake(){
         gp = GameObject.FindObjectOfType<GameProgress>();
         if(gp){
@@ -29,16 +30,18 @@ public class RoomController : MonoBehaviour
     void Start(){
         if(gp.isFirstTime){
             SetEnabledScripts(false);
+            StartCoroutine(DelayInitialClick());
         }else{
             titleObject.gameObject.SetActive(false);
         }
     }
 
     void Update(){
-        if(Input.GetMouseButtonDown(0) && gp.isFirstTime){
+        if(Input.GetMouseButtonDown(0) && gp.isFirstTime && ableToClick){
             titleObject.SetTrigger("StartGame");
             gp.isFirstTime = false;
             StartCoroutine(ActivateScripts());
+            ableToClick = false;
         }
     }
 
@@ -98,6 +101,12 @@ public class RoomController : MonoBehaviour
         SetEnabledScripts(true);
 
         //pMovement.transform.GetChild(2).GetComponent<Animator>().speed = 1;
+        
+    }
+    IEnumerator DelayInitialClick(){
+        yield return new  WaitForSeconds(2f);
+
+        ableToClick = true;
         
     }
 

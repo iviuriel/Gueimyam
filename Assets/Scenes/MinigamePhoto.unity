@@ -6980,7 +6980,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enable: 1
-  displayText: Frase de la foto del puzzle
+  displayText: "A veces por las noches me acuerdo de cuando haciamos fiestas de pijamas
+    y no sabes como hecho de menos esas noches de pelis y hacer el tonto\u2026 "
   uiText: {fileID: 1748685728}
   textAnimator: {fileID: 917604782}
 --- !u!4 &391187230
