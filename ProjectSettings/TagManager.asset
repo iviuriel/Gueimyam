@@ -9,6 +9,9 @@ TagManager:
   - Rock
   - Wall
   - Shell
+  - Exit
+  - Floor
+  - DoorWin
   layers:
   - Default
   - TransparentFX
@@ -19,9 +22,9 @@ TagManager:
   - 
   - 
   - PhotoSheet
-  - 
-  - 
-  - 
+  - Player
+  - Floor
+  - Cartel
   - 
   - 
   - 

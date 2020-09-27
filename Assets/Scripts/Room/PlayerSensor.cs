@@ -7,19 +7,38 @@ public class PlayerSensor : MonoBehaviour
     private List<GameObject> gameObjectsFound;
     private GameObject nearestGameObject;
 
+    private LineRenderer lineRenderer;
+
+    public Vector3 lineOrigin;
+
+    private Animator cartelAnimator;
+
+    private bool isDetecting;
+
+    void Awake(){
+        lineRenderer = GetComponent<LineRenderer>();
+        cartelAnimator = transform.parent.GetChild(2).GetChild(2).GetComponent<Animator>();
+    }
     void Start(){
         gameObjectsFound = new List<GameObject>();
+        isDetecting = false;
+        
     }
 
     void Update(){
-        UpdateActiveItem();
+        if(isDetecting){
+            UpdateActiveItem();
 
-        if(Input.GetKeyDown(KeyCode.E) && nearestGameObject){
-            nearestGameObject.GetComponent<BasicInteraction>().Interact(transform.parent.gameObject);
+            if(Input.GetKeyDown(KeyCode.E) && nearestGameObject){
+                nearestGameObject.GetComponent<BasicInteraction>().Interact(transform.parent.gameObject);
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
     {
+        if(!isDetecting){
+            return;
+        }
         BasicInteraction bi = other.gameObject.GetComponent<BasicInteraction>();
         if(bi && bi.enable){
             AddObject(other.gameObject);
@@ -27,6 +46,9 @@ public class PlayerSensor : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        if(!isDetecting){
+            return;
+        }
         BasicInteraction bi = other.gameObject.GetComponent<BasicInteraction>();
         if(bi){
             RemoveObject(other.gameObject);
@@ -42,8 +64,7 @@ public class PlayerSensor : MonoBehaviour
     {
         gameObjectsFound.Remove(g);
         if(g == nearestGameObject){
-            Material mat = g.GetComponent<MeshRenderer>().material;
-            mat.SetFloat("_OutlineWidth", 1);
+            nearestGameObject.GetComponent<Outline>().OutlineMode = Outline.Mode.NoOutline;
         }
     }
     
@@ -53,8 +74,7 @@ public class PlayerSensor : MonoBehaviour
 
         //Deletes the current outline
         if(nearestGameObject){
-            Material mat = nearestGameObject.GetComponent<MeshRenderer>().material;
-            mat.SetFloat("_OutlineWidth", 1);
+            nearestGameObject.GetComponent<Outline>().OutlineMode = Outline.Mode.NoOutline;
         } 
         if(gameObjectsFound.Count > 0){
             foreach(GameObject go in gameObjectsFound)
@@ -69,8 +89,16 @@ public class PlayerSensor : MonoBehaviour
             } 
 
             //Add the outline to the current object
-            Material mat = nearestGameObject.GetComponent<MeshRenderer>().material;
-            mat.SetFloat("_OutlineWidth", 1.15f);           
+            nearestGameObject.GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineVisible; 
+
+            cartelAnimator.SetBool("IsShown", true);          
+        }else{
+            cartelAnimator.SetBool("IsShown", false);  
         }
+    }
+
+    public void StartDetecting(){
+        cartelAnimator.SetTrigger("Start");
+        isDetecting = true;
     }
 }

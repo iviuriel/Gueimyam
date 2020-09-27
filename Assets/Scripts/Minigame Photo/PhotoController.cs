@@ -6,22 +6,30 @@ using UnityEngine.SceneManagement;
 public class PhotoController : MinigameController
 {
     private PhotoPiece[] photoPieces;
+
+    public AudioSource completeAudioSource;
+    private bool endGame;
     // Start is called before the first frame update
     void Start()
     {
         photoPieces = GameObject.FindObjectsOfType<PhotoPiece>();
+        endGame = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        foreach(PhotoPiece p in photoPieces){
-            bool isCorrect = p.IsPlacedCorrectly();
-            if(!isCorrect){
-                return;
+        if(!endGame){
+            foreach(PhotoPiece p in photoPieces){
+                bool isCorrect = p.IsPlacedCorrectly();
+                if(!isCorrect){
+                    return;
+                }
             }
-        }
 
-        CompleteMinigame("photo");
+            completeAudioSource.Play();
+            GetComponent<Animator>().Play("ShowCompletePhoto");
+            endGame = true;
+        }
     }
 }

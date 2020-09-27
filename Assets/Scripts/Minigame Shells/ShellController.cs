@@ -13,6 +13,17 @@ public class ShellController : MinigameController
     private List<GameObject> selectedShells;
 
     private Animator animator;
+
+    public bool endGame;
+
+    [Header("SFX")]
+    public AudioSource audioSource;
+    public AudioClip clickShell;
+    public AudioClip correctShell;
+    public AudioClip wrongShell;
+    public AudioClip levelCompleted;
+    public AudioClip gameCompleted;
+
     // Start is called before the first frame update
 
     void Awake(){
@@ -22,27 +33,34 @@ public class ShellController : MinigameController
     {
         selectedShells = new List<GameObject>();
         currentLevel = -1;
+        endGame = false;
         NextLevel();
     }
 
     void Update(){
-        if (Input.GetMouseButtonDown(0))
-        {
-            CheckClick();
-            //StartCoroutine("ClickDelay");
-            if(selectedShells.Count == 2){
-                CompareShells();
-                if(IsEndOfLevel()){
-                    NextLevel();
+        if(!endGame){
+            if (Input.GetMouseButtonDown(0))
+            {
+                CheckClick();
+            }
+
+            CheckShells();
+            if(IsEndOfLevel()){
+                if(currentLevel != 2){
+                    PlayAudio(levelCompleted);
+                }else{
+                    PlayAudio(gameCompleted);
                 }
+                NextLevel();
             }
         }
     }
 
     void NextLevel(){
         currentLevel++;
-        if(currentLevel == 3){            
-            CompleteMinigame("shell");
+        if(currentLevel == 3){
+            endGame = true;
+            animator.SetTrigger("NextLevel");            
             return;
         }
 
@@ -62,8 +80,9 @@ public class ShellController : MinigameController
         Transform table = transform.GetChild(currentLevel);
 
         for(int i = 0; i< shellsInTheLevel.Count; i++){
-            GameObject s = Instantiate(shellsInTheLevel[i], table.GetChild(0).GetChild(i).position, Quaternion.identity, table.GetChild(1));
+            GameObject s = Instantiate(shellsInTheLevel[i], table.GetChild(0).GetChild(i).position - new Vector3(0,0,2), Quaternion.identity, table.GetChild(1));
             s.transform.localScale = new Vector3 (1/table.localScale.x, 1/table.localScale.z, 1/table.localScale.z );
+            //s.transform.localPosition = new Vector3 (s.transform.localPosition.x, s.transform.localPosition.y, 0f );
         }
 
         animator.SetTrigger("NextLevel");
@@ -95,32 +114,47 @@ public class ShellController : MinigameController
                 {
                    GameObject s = hit.collider.gameObject;
                    if(selectedShells.Contains(s)){
-                       selectedShells.Remove(s);                      
+                       selectedShells.Remove(s);                                          
                    }else{
                        selectedShells.Add(s);                       
-                   }                    
+                   }  
+                   PlayAudio(clickShell);
+                   s.GetComponent<Animator>().SetTrigger("Toggle");                     
                 }
             }
+        }
+    }
+
+    void CheckShells(){
+        //StartCoroutine("ClickDelay");
+        if(selectedShells.Count == 2 && selectedShells[0].GetComponent<Shell>().selected && selectedShells[1].GetComponent<Shell>().selected){
+            CompareShells();            
         }
     }
 
     void CompareShells(){
         Shell s1 = selectedShells[0].GetComponent<Shell>();
         Shell s2 = selectedShells[1].GetComponent<Shell>();
+        selectedShells = new List<GameObject>();
 
         if(s1.id == s2.id){
-            s1.transform.parent = null;
-            s2.transform.parent = null;
-            
-            GameObject.Destroy(s1.gameObject);
-            GameObject.Destroy(s2.gameObject);
+            s1.GetComponent<Animator>().SetTrigger("Correct");
+            s2.GetComponent<Animator>().SetTrigger("Correct");
+            PlayAudio(correctShell);
+        }else{
+            s1.GetComponent<Animator>().SetTrigger("Toggle");
+            s2.GetComponent<Animator>().SetTrigger("Toggle");
+            PlayAudio(wrongShell);
         }
-
-        selectedShells = new List<GameObject>();
     }
 
     bool IsEndOfLevel(){
         Transform table = transform.GetChild(currentLevel);
         return table.GetChild(1).childCount == 0;
+    }
+
+    void PlayAudio(AudioClip clip){
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

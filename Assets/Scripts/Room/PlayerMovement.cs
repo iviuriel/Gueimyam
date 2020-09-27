@@ -23,9 +23,27 @@ public class PlayerMovement : MonoBehaviour
     [Range(0, 10)]
     public float scrollSpeed = 6f;
 
+    [Tooltip("The times the rotation will be divided on to set the camera away")]
+    public int distanceDeltaMultiplier = 200;
+    
+    [Tooltip("The distance between the player position and the pivot origin in the Z-Axis")]
+    [Range(0, 0.05f)]
+    public float distanceOriginPivot = 0.005f;
+
+    [Header("Max Distance values")]
+    [Tooltip("Minimum distance of the pivot to the player.")]
+    [Range(0f, 0.1f)]
+    public float minCameraDistance = 0.001f;
+
+    [Tooltip("Maximum distance of the pivot to the player.")]
+    [Range(0f, 0.1f)]
+    public float maxCameraDistance = 0.03f;
+
+    private float percentageRotation;
+
     [Header("Start Rotation")]
     [Tooltip("Start rotation of the pivot on X-axis")]
-    public float startRotationVertical;
+    public float startRotationVertical = 20;
     [Tooltip("Start rotation of the player on Y-axis")]
     public float startRotationHorizontal;
 
@@ -46,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     //Movement values
     private float movVertValue;
     private float movHorValue;
+    private bool movingRight; //Si se mueve hacia la derecha
 
     [Header("Movement")]
     [Tooltip("Speed of the main character")]
@@ -57,11 +76,20 @@ public class PlayerMovement : MonoBehaviour
 
     private GameProgress gameProgress;
 
+    //------------ANIMATION------------------
+    //---------------------------------------
+
+    private Animator rotationAnimator;
+    private Animator moveAnimator;
+
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody>();
         cameraPivot = transform.GetChild(0);
         gameProgress = GameObject.FindObjectOfType<GameProgress>();
+
+        rotationAnimator = GetComponent<Animator>();
+        moveAnimator = transform.GetChild(2).GetComponent<Animator>();
 
         if(gameProgress){
             PlayerInfo pi = gameProgress.GetPlayerInfo();
@@ -82,7 +110,10 @@ public class PlayerMovement : MonoBehaviour
     {      
         localRotation.y = startRotationVertical;
         localRotation.x = startRotationHorizontal;
-        ableToRotate = true;        
+        ableToRotate = true;     
+        percentageRotation = 0;   
+
+        movingRight = true;
     }
 
     // Update is called once per frame
@@ -101,7 +132,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Rotate(){
-        
         if (Input.GetMouseButton(1) && ableToRotate)
         {
             localRotation.x += Input.GetAxis("Mouse X") * mouseSensitivity;
@@ -115,18 +145,47 @@ public class PlayerMovement : MonoBehaviour
 
         Quaternion QTPivot = Quaternion.Euler(localRotation.y, 0, 0);
         cameraPivot.localRotation = Quaternion.Lerp(cameraPivot.localRotation, QTPivot, Time.deltaTime * orbitSpeed);
-        cameraPivot.localPosition = new Vector3(0f, 0f, cameraPivot.localEulerAngles.x/-2);
+        percentageRotation = (cameraPivot.localRotation.eulerAngles.x - minVerticalRotation)/(maxVerticalRotation - minVerticalRotation);
+        float zPos = ((maxCameraDistance - minCameraDistance) * percentageRotation) + minCameraDistance;
+        cameraPivot.localPosition = new Vector3(0f, cameraPivot.localPosition.y, zPos);
     }
 
     void Move(){
         Vector3 moveOnLocal = transform.TransformDirection(new Vector3(movHorValue, 0f, movVertValue));
         Vector3 movement = moveOnLocal * speed * Time.deltaTime;
         rigidBody.MovePosition(rigidBody.position + movement);
+
+        if(movHorValue == 0f && movVertValue == 0f){
+            moveAnimator.speed = 0;
+        }else{
+            moveAnimator.speed = 1;
+            //Si se mueve a la derecha
+            if(movHorValue > 0)
+            {   
+                //Si no se movía hacia la derecha lo giramos
+                if(!movingRight){
+                    rotationAnimator.Play("RotateToRight");
+                    movingRight = true;
+                }
+            }else if(movHorValue < 0){
+                //Si se movia hacia la derecha lo giramos
+                if(movingRight){
+                    rotationAnimator.Play("RotateToLeft");
+                    movingRight = false;
+                }
+            }
+        }
     }
 
     public void SetPlayerInfo(){
         if(gameProgress){
             gameProgress.SetPlayerInfo(transform.position, transform.rotation.eulerAngles, cameraPivot.localPosition, cameraPivot.localRotation.eulerAngles);
+        }
+    }
+
+    void OnTriggerEnter(Collider other){
+        if(other.gameObject.CompareTag("DoorWin")){
+            GameObject.FindObjectOfType<RoomController>().EndGame();
         }
     }
 }

@@ -1,0 +1,1299 @@
+fileFormatVersion: 2
+guid: efe79416e34b46041ab4bf8b5170a999
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8364671707554949691
+    second: "BA\xD1O foto puzzle 1_0"
+  - first:
+      213: 4289372936575672366
+    second: "BA\xD1O foto puzzle 1_1"
+  - first:
+      213: 1528411647810563394
+    second: "BA\xD1O foto puzzle 1_2"
+  - first:
+      213: -3543303419803626410
+    second: "BA\xD1O foto puzzle 1_3"
+  - first:
+      213: 6879492213877020797
+    second: "BA\xD1O foto puzzle 1_4"
+  - first:
+      213: -3634867735892943781
+    second: "BA\xD1O foto puzzle 1_5"
+  - first:
+      213: -5201977721336360523
+    second: "BA\xD1O foto puzzle 1_6"
+  - first:
+      213: 5151262731518373461
+    second: "BA\xD1O foto puzzle 1_7"
+  - first:
+      213: 8329608901231410325
+    second: "BA\xD1O foto puzzle 1_8"
+  - first:
+      213: -6350893573697131479
+    second: "BA\xD1O foto puzzle 1_9"
+  - first:
+      213: -6830001586149473013
+    second: "BA\xD1O foto puzzle 1_10"
+  - first:
+      213: 3153153169208673504
+    second: "BA\xD1O foto puzzle 1_11"
+  - first:
+      213: -7538037392077210114
+    second: "BA\xD1O foto puzzle 1_12"
+  - first:
+      213: -4457551623439483260
+    second: "BA\xD1O foto puzzle 1_13"
+  - first:
+      213: -1092821678593705818
+    second: "BA\xD1O foto puzzle 1_14"
+  - first:
+      213: -3882861550687238126
+    second: "BA\xD1O foto puzzle 1_15"
+  - first:
+      213: -3616071009648396520
+    second: "BA\xD1O foto puzzle 1_16"
+  - first:
+      213: 8812331565094057110
+    second: "BA\xD1O foto puzzle 1_17"
+  - first:
+      213: 7487570402959702834
+    second: "BA\xD1O foto puzzle 1_18"
+  - first:
+      213: 3217931137300814293
+    second: "BA\xD1O foto puzzle 1_19"
+  - first:
+      213: -6849541447540075705
+    second: "BA\xD1O foto puzzle 1_20"
+  - first:
+      213: 2644480857367917563
+    second: "BA\xD1O foto puzzle 1_21"
+  - first:
+      213: -7334660741414127204
+    second: "BA\xD1O foto puzzle 1_22"
+  - first:
+      213: -5012553205177663475
+    second: "BA\xD1O foto puzzle 1_23"
+  - first:
+      213: -8418703252053438209
+    second: "BA\xD1O foto puzzle 1_24"
+  - first:
+      213: 1286311695120679385
+    second: "BA\xD1O foto puzzle 1_25"
+  - first:
+      213: -7414113161021471136
+    second: "BA\xD1O foto puzzle 1_26"
+  - first:
+      213: -35302650149208647
+    second: "BA\xD1O foto puzzle 1_27"
+  - first:
+      213: 452148388153126964
+    second: "BA\xD1O foto puzzle 1_28"
+  - first:
+      213: -1065711819083399181
+    second: "BA\xD1O foto puzzle 1_29"
+  - first:
+      213: -742415540884747061
+    second: "BA\xD1O foto puzzle 1_30"
+  - first:
+      213: -4319345847937974080
+    second: "BA\xD1O foto puzzle 1_31"
+  - first:
+      213: 624457025160680401
+    second: "BA\xD1O foto puzzle 1_32"
+  - first:
+      213: 9009587521877308656
+    second: "BA\xD1O foto puzzle 1_33"
+  - first:
+      213: 7510574597975676671
+    second: "BA\xD1O foto puzzle 1_34"
+  - first:
+      213: -8967407416840647820
+    second: "BA\xD1O foto puzzle 1_35"
+  - first:
+      213: -6461222396254471603
+    second: "BA\xD1O foto puzzle 1_36"
+  - first:
+      213: 6808955604668566771
+    second: "BA\xD1O foto puzzle 1_37"
+  - first:
+      213: 8588488046647441210
+    second: "BA\xD1O foto puzzle 1_38"
+  - first:
+      213: 1253521657300441138
+    second: "BA\xD1O foto puzzle 1_39"
+  - first:
+      213: 6012064170021903704
+    second: "BA\xD1O foto puzzle 1_40"
+  - first:
+      213: -8615584105555258776
+    second: "BA\xD1O foto puzzle 1_41"
+  - first:
+      213: -2539942430277668337
+    second: "BA\xD1O foto puzzle 1_42"
+  - first:
+      213: 6928745744103803560
+    second: "BA\xD1O foto puzzle 1_43"
+  - first:
+      213: 1648896581488974905
+    second: "BA\xD1O foto puzzle 1_44"
+  - first:
+      213: -2003677662443548133
+    second: "BA\xD1O foto puzzle 1_45"
+  - first:
+      213: 2444545820569328403
+    second: "BA\xD1O foto puzzle 1_46"
+  - first:
+      213: 1033644634055759172
+    second: "BA\xD1O foto puzzle 1_47"
+  - first:
+      213: 3641867603559262779
+    second: "BA\xD1O foto puzzle 1_48"
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1755.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853aaaec0fc05974eb037d3bffc6e6dd
+      internalID: -8364671707554949691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_1"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1755.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c90f7a0f8f1acb45b179052c35211b9
+      internalID: 4289372936575672366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_2"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1755.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af7d149bcb2c50149893365abe3bb63f
+      internalID: 1528411647810563394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_3"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1755.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c930fb5329489ed488fe4e618e785cd7
+      internalID: -3543303419803626410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_4"
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1755.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f7974d81f82da43a6d43036a626205
+      internalID: 6879492213877020797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_5"
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1755.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4682ef6275ed5a34086844591b7eb349
+      internalID: -3634867735892943781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_6"
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1755.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41f7e050f43e7247986267a352c1964
+      internalID: -5201977721336360523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_7"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1463.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6cd1d9d93f43f46bd7052659b69544
+      internalID: 5151262731518373461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_8"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1463.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53b46462987a474a95716ef657725bd
+      internalID: 8329608901231410325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_9"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1463.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1208fbe0d6cd60c4986d482a09b7573b
+      internalID: -6350893573697131479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_10"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1463.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12a8003941728e4385bbb51518b212c
+      internalID: -6830001586149473013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_11"
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1463.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36655065658f86f4c8a9992267c537ba
+      internalID: 3153153169208673504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_12"
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1463.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227fe60579096b54d9ebf0732bcac577
+      internalID: -7538037392077210114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_13"
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1463.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a985082d158829b40957b4fe075da482
+      internalID: -4457551623439483260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_14"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1171.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eca075ae08e8bc48a55458e57e89c1e
+      internalID: -1092821678593705818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_15"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1171.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c22f11b149ebf4984587ce12f62e87
+      internalID: -3882861550687238126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_16"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1171.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320729b5fa938354399520153ccd7359
+      internalID: -3616071009648396520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_17"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1171.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ae466918c14cf4da0f5f0168be002d
+      internalID: 8812331565094057110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_18"
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1171.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df1f934ceb35c24b8a7a87a2896e454
+      internalID: 7487570402959702834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_19"
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1171.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0c2432ddea96e4e8884d097183f5ab
+      internalID: 3217931137300814293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_20"
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1171.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ae2ffefcbd2de4da9aa4049d2d4835
+      internalID: -6849541447540075705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_21"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 879.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3c67b0d819d0648b7f0252625e4051
+      internalID: 2644480857367917563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_22"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 879.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4adaf06b66e23c4dbfd12e66a849184
+      internalID: -7334660741414127204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_23"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 879.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e8cf480598b6d4db4a5adb81a733e6
+      internalID: -5012553205177663475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_24"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 879.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c6e9f3c0142714ba63ba84d0d6ef8d
+      internalID: -8418703252053438209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_25"
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 879.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac32f99630ee482479aed707c37ec970
+      internalID: 1286311695120679385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_26"
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 879.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83638e159557857478aad6270992b439
+      internalID: -7414113161021471136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_27"
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 879.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f9876771cdf8c47baccdca1d3d8fc7
+      internalID: -35302650149208647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_28"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 587.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56070cc224f8d734bbcd4b2e2abfe056
+      internalID: 452148388153126964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_29"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 587.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655a9c66e2c63c84087056ade75872e1
+      internalID: -1065711819083399181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_30"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 587.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baadb244de64dc49b16242692b698cc
+      internalID: -742415540884747061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_31"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 587.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef57d7f9ba69d57479ae73547b25ff4f
+      internalID: -4319345847937974080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_32"
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 587.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edaac1754f3d734eb97e4ffe9874db3
+      internalID: 624457025160680401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_33"
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 587.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89618a36ecea58d45a57caeea378e255
+      internalID: 9009587521877308656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_34"
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 587.4286
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df802c8a17d991f4e9ccf7a0aadd8386
+      internalID: 7510574597975676671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_35"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 295.42856
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccbdd845cc71ab343bee799528cefc37
+      internalID: -8967407416840647820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_36"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 295.42856
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4d9add2afe3b24aa164eb6a935a974
+      internalID: -6461222396254471603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_37"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 295.42856
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7250a49a8446444186fe4dee1c34de0
+      internalID: 6808955604668566771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_38"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 295.42856
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88bd8b0a18014c47b1cca3974ce40df
+      internalID: 8588488046647441210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_39"
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 295.42856
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fab79b1d941804a872c845344b4369
+      internalID: 1253521657300441138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_40"
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 295.42856
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a9d9a16b1084143ab5892dfe871d0a
+      internalID: 6012064170021903704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_41"
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 295.42856
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77cd58985cac7b54e9d151545d3bdca2
+      internalID: -8615584105555258776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_42"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.4285583
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93398da282e6e54c9a0a22b63ff0f02
+      internalID: -2539942430277668337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_43"
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 3.4285583
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4454478773181134a8dd132ff0b0be94
+      internalID: 6928745744103803560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_44"
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 3.4285583
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb28e9025b6ec4e458ecca20d66b4906
+      internalID: 1648896581488974905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_45"
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 3.4285583
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f15502ea27b0f4b9c86ca7695c32b6
+      internalID: -2003677662443548133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_46"
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 3.4285583
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23191218ba7379408ef58f2c15abbf5
+      internalID: 2444545820569328403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_47"
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 3.4285583
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c893b08afb8524c849cb114a65bdcc
+      internalID: 1033644634055759172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "BA\xD1O foto puzzle 1_48"
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3.4285583
+        width: 292.57144
+        height: 292.57144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ec68f4ccf947346b59d247160d0b0e
+      internalID: 3641867603559262779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6336a0dd7a99a5a4bb5338eb3884b0d6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

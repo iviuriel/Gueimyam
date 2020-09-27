@@ -9,16 +9,20 @@ public class PhotoPiece : MonoBehaviour
     private bool mouseOver;
     private Transform sheet;
     private Animator animator;
+    private Vector3 origin;
+
+    private AudioSource audioSource;
 
     void Awake(){
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
     // Start is called before the first frame update
     void Start()
     {
         int rotMultiplier = UnityEngine.Random.Range(0, 4);
-        int initialRotation = 90*rotMultiplier;
-        Debug.Log(initialRotation);
+        //int initialRotation = 90*rotMultiplier;
+        int initialRotation = 0;
         transform.rotation = Quaternion.Euler(0, 0, initialRotation);
 
         animator.Play("Start"+ initialRotation);
@@ -37,7 +41,8 @@ public class PhotoPiece : MonoBehaviour
                 //calculate the position based on percentage of mouse/screen
                 Vector3 mousePosition = Input.mousePosition;
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-                transform.localPosition = new Vector3(worldPosition.x, worldPosition.y, 0f);
+                transform.localPosition = new Vector3(worldPosition.x, worldPosition.y, -2f);
+
             }
             if (Input.GetMouseButtonUp(0))
             {              
@@ -47,8 +52,18 @@ public class PhotoPiece : MonoBehaviour
                 if(hit.collider != null)
                 {
                     Transform t = hit.collider.transform;
-                    transform.position = t.position;
-                    sheet = t;
+                    PhotoSheet ps = t.GetComponent<PhotoSheet>();
+                    if(!ps.used){
+                        transform.position = t.position + new Vector3(0f, 0f, -1f);
+                        sheet = t;
+                        sheet.GetComponent<PhotoSheet>().used = true;
+                        audioSource.Play();
+                    }else{
+                        if(sheet){
+                            sheet.GetComponent<PhotoSheet>().used = true;                            
+                        }
+                        transform.position = origin;
+                    }
                 }else{
                     sheet = null;
                 }
@@ -56,15 +71,23 @@ public class PhotoPiece : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(1) && mouseOver)
+        /*if (Input.GetMouseButtonDown(1) && mouseOver)
         {
             animator.SetTrigger("Rotate");
-        }
+        }*/
     }
 
     private void OnMouseDrag()
     {
         isClicked = true;        
+    }
+
+    private void OnMouseDown(){
+        if(sheet){
+            sheet.GetComponent<PhotoSheet>().used = false;
+        }
+        origin = transform.position;
+        audioSource.Play();
     }
 
     private void OnMouseEnter(){
