@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigamePhoto.unity
     guid: 51b897035f875294a872b3e6d9f9a3da
+  - enabled: 1
+    path: Assets/Scenes/MinigameHockey.unity
+    guid: 2a02ef18f38af024fa376c1f8e920239
   m_configObjects: {}

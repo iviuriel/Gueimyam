@@ -182,4 +182,10 @@ public class PlayerMovement : MonoBehaviour
             gameProgress.SetPlayerInfo(transform.position, transform.rotation.eulerAngles, cameraPivot.localPosition, cameraPivot.localRotation.eulerAngles);
         }
     }
+
+    void OnTriggerEnter(Collider other){
+        if(other.gameObject.CompareTag("DoorWin")){
+            GameObject.FindObjectOfType<RoomController>().EndGame();
+        }
+    }
 }

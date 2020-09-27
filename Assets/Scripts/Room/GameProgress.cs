@@ -11,6 +11,10 @@ public class GameProgress : MonoBehaviour
     public bool shellsMinigame {get; set;}
     public bool photosMinigame {get; set;}
 
+    public bool photoBaby {get; set;}
+
+    public bool isFirstTime {get; set;}
+
     //PLAYER INFO
     private PlayerInfo playerInfo;
 
@@ -34,6 +38,9 @@ public class GameProgress : MonoBehaviour
         mapMinigame = false;
         shellsMinigame = false;
         photosMinigame = false;
+        photoBaby = false;
+
+        isFirstTime = true;
     }
 
     public void SetPlayerInfo(Vector3 p, Vector3 r, Vector3 cp, Vector3 cr){

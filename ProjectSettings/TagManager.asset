@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Shell
   - Exit
+  - Floor
+  - DoorWin
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - 
   - 
   - PhotoSheet
-  - 
+  - Player
   - 
   - 
   - 
