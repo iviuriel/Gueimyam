@@ -11,20 +11,20 @@ public class PlayerIce : MonoBehaviour
     private Transform snowStepped;
 
     private bool movingRight;
-    private Animator rotationAnimator;
-    private Animator moveAnimator;
+    //private Animator rotationAnimator;
+    //private Animator moveAnimator;
     private HockeyController hockeyController;
     public bool finish;
     void Awake(){
-        rotationAnimator = GetComponent<Animator>();
-        moveAnimator = transform.GetChild(1).GetComponent<Animator>();
+        //rotationAnimator = GetComponent<Animator>();
+        //moveAnimator = transform.GetChild(1).GetComponent<Animator>();
         hockeyController = GameObject.FindObjectOfType<HockeyController>();
     }
     void Start()
     {
         slicing = false;
         movingRight = true;
-        moveAnimator.speed = 0;
+        //moveAnimator.speed = 0;
         finish = false;
     }
 
@@ -55,7 +55,7 @@ public class PlayerIce : MonoBehaviour
                     slicing = true;
                     direction = Vector3.left;
                     if(movingRight){
-                        rotationAnimator.Play("RotateToLeft");
+                        //rotationAnimator.Play("RotateToLeft");
                         movingRight = false;
                     }
                     
@@ -85,7 +85,7 @@ public class PlayerIce : MonoBehaviour
                     slicing = true;
                     direction = Vector3.right;
                     if(!movingRight){
-                        rotationAnimator.Play("RotateToRight");
+                        //rotationAnimator.Play("RotateToRight");
                         movingRight = true;
                     }
                     
