@@ -24,6 +24,7 @@ public class SecondaryObject : BasicInteraction
             if(pMovementRef){
                 pMovementRef.enabled = false;
             }
+            GetComponent<Outline>().enabled = false;
             activated = true;
         }
     }
@@ -36,7 +37,7 @@ public class SecondaryObject : BasicInteraction
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(Input.GetKeyDown(KeyCode.Space) && activated){
             if(typing){
                 StopCoroutine(textCoroutine);
                 textCoroutine = null;
@@ -50,8 +51,11 @@ public class SecondaryObject : BasicInteraction
                 if(objectToShow){
                     objectAnimator.Play("HideObject");
                 }
-                pMovementRef.enabled = true;
+                if(pMovementRef){
+                    pMovementRef.enabled = true;
+                }
                 pMovementRef = null;
+                GetComponent<Outline>().enabled = true;
                 activated = false;
             }
         }

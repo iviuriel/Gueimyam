@@ -25,7 +25,7 @@ public class MinigameController : MonoBehaviour
         }
 
         //Temporal
-        SceneManager.LoadScene("Test-Ivan");
+        SceneManager.LoadScene("Room");
         return;
     }
 

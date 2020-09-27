@@ -23,6 +23,7 @@ public class CorchoObject : BasicInteraction
             if(pMovementRef){
                 pMovementRef.enabled = false;
             }
+            GetComponent<Outline>().enabled = false;
             activated = true;
         }
     }
@@ -47,8 +48,11 @@ public class CorchoObject : BasicInteraction
                     textAnimator.Play("HideText");
                 }
                 objectAnimator.Play("HideObject");
-                pMovementRef.enabled = true;
+                if(pMovementRef){
+                    pMovementRef.enabled = true;
+                }
                 pMovementRef = null;
+                GetComponent<Outline>().enabled = true;
                 activated = false;
             }
         }

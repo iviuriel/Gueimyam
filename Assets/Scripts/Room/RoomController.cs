@@ -71,23 +71,23 @@ public class RoomController : MonoBehaviour
 
     void UpdateCorcho(){
         if(gp.hockeyMinigame){
-            corchoCerca.GetChild(0).GetComponent<Image>().color = Color.white;
+            corchoCerca.GetChild(0).GetChild(0).GetComponent<Image>().color = Color.white;
             corchoObject.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
         }
         if(gp.shellsMinigame){
-            corchoCerca.GetChild(1).GetComponent<Image>().color = Color.white;
+            corchoCerca.GetChild(0).GetChild(1).GetComponent<Image>().color = Color.white;
             corchoObject.GetChild(1).GetComponent<SpriteRenderer>().color = Color.white;
         }
         if(gp.mapMinigame){
-            corchoCerca.GetChild(2).GetComponent<Image>().color = Color.white;
+            corchoCerca.GetChild(0).GetChild(2).GetComponent<Image>().color = Color.white;
             corchoObject.GetChild(2).GetComponent<SpriteRenderer>().color = Color.white;
         }
         if(gp.photosMinigame){
-            corchoCerca.GetChild(3).GetComponent<Image>().color = Color.white;
+            corchoCerca.GetChild(0).GetChild(3).GetComponent<Image>().color = Color.white;
             corchoObject.GetChild(3).GetComponent<SpriteRenderer>().color = Color.white;
         }
         if(gp.photoBaby){
-            corchoCerca.GetChild(4).GetComponent<Image>().color = Color.white;
+            corchoCerca.GetChild(0).GetChild(4).GetComponent<Image>().color = Color.white;
             corchoObject.GetChild(4).GetComponent<SpriteRenderer>().color = Color.white;
         }
     }

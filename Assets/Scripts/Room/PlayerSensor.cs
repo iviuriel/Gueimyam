@@ -49,8 +49,7 @@ public class PlayerSensor : MonoBehaviour
     {
         gameObjectsFound.Remove(g);
         if(g == nearestGameObject){
-            lineRenderer.SetPosition(0, Vector3.zero);
-            lineRenderer.SetPosition(1, Vector3.zero);
+            nearestGameObject.GetComponent<Outline>().OutlineMode = Outline.Mode.NoOutline;
         }
     }
     
@@ -60,8 +59,7 @@ public class PlayerSensor : MonoBehaviour
 
         //Deletes the current outline
         if(nearestGameObject){
-            lineRenderer.SetPosition(0, Vector3.zero);
-            lineRenderer.SetPosition(1, Vector3.zero);
+            nearestGameObject.GetComponent<Outline>().OutlineMode = Outline.Mode.NoOutline;
         } 
         if(gameObjectsFound.Count > 0){
             foreach(GameObject go in gameObjectsFound)
@@ -76,8 +74,7 @@ public class PlayerSensor : MonoBehaviour
             } 
 
             //Add the outline to the current object
-            lineRenderer.SetPosition(0, transform.position + lineOrigin);           
-            lineRenderer.SetPosition(1, nearestGameObject.transform.position);           
+            nearestGameObject.GetComponent<Outline>().OutlineMode = Outline.Mode.OutlineVisible;           
         }
     }
 }
