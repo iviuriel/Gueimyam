@@ -1142,6 +1142,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Suelo
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 40f6f68f2388839408fd55491b9802cf,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 40f6f68f2388839408fd55491b9802cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1585,6 +1590,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Alfombra
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0d5f6e32441e4b947905c6d823c05f37,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0d5f6e32441e4b947905c6d823c05f37,
         type: 3}
@@ -5347,6 +5357,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177569686847381048, guid: 2fbb4adc43562e247b693de40592eed8,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140433477, guid: 2fbb4adc43562e247b693de40592eed8, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844016480, guid: 2fbb4adc43562e247b693de40592eed8, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1536
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fbb4adc43562e247b693de40592eed8, type: 3}

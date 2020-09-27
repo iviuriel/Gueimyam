@@ -148,4 +148,11 @@ public class PlayerIce : MonoBehaviour
             } 
         } 
     }
+
+    public void SetStartPlayer(Transform spawn){
+        lastFloor = spawn;
+        transform.position = new Vector3(spawn.position.x, transform.position.y, spawn.position.z);
+        GetComponent<PlayerIce>().finish = false;
+
+    }
 }

@@ -35,7 +35,8 @@ public class HockeyController : MinigameController
     }
 
     public void PlacePlayer(){
-        player.position = new Vector3(levelSpawns[currentLevel].position.x, player.position.y, levelSpawns[currentLevel].position.z);
-        player.GetComponent<PlayerIce>().finish = false;
+        player.GetComponent<PlayerIce>().SetStartPlayer(levelSpawns[currentLevel]);
+        // player.position = new Vector3(levelSpawns[currentLevel].position.x, player.position.y, levelSpawns[currentLevel].position.z);
+        // player.GetComponent<PlayerIce>().finish = false;
     }
 }
