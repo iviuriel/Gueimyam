@@ -15,16 +15,20 @@ public class PlayerIce : MonoBehaviour
     //private Animator moveAnimator;
     private HockeyController hockeyController;
     public bool finish;
+
+    [Header("Audio")]
+    private AudioSource audioSource;
+    public AudioClip snowFloor;
+    public AudioClip iceRoll;
+    public AudioClip hitSound;
     void Awake(){
-        //rotationAnimator = GetComponent<Animator>();
-        //moveAnimator = transform.GetChild(1).GetComponent<Animator>();
         hockeyController = GameObject.FindObjectOfType<HockeyController>();
+        audioSource = GetComponent<AudioSource>();
     }
     void Start()
     {
         slicing = false;
         movingRight = true;
-        //moveAnimator.speed = 0;
         finish = false;
     }
 
@@ -41,13 +45,7 @@ public class PlayerIce : MonoBehaviour
                     GetComponent<Rigidbody>().velocity = Vector3.forward * 10;
                     slicing = true;
                     direction = Vector3.forward;
-
-                    //Sprites
-                    /*if(state.Equals(StateStep.ICE)){
-                    moveAnimator.speed = 0;
-                    }else{
-                        moveAnimator.speed = 1;
-                    }*/
+                    PlayAudio(iceRoll);
                 }
                 else if (Input.GetKeyDown(KeyCode.A))
                 {
@@ -55,29 +53,16 @@ public class PlayerIce : MonoBehaviour
                     slicing = true;
                     direction = Vector3.left;
                     if(movingRight){
-                        //rotationAnimator.Play("RotateToLeft");
                         movingRight = false;
                     }
-                    
-                    //Sprites
-                    /*if(state.Equals(StateStep.ICE)){
-                    moveAnimator.speed = 0;
-                    }else{
-                        moveAnimator.speed = 1;
-                    }*/
+                    PlayAudio(iceRoll);
                 }
                 else if (Input.GetKeyDown(KeyCode.S))
                 {
                     GetComponent<Rigidbody>().velocity = Vector3.back * 10;
                     slicing = true;
                     direction = Vector3.back;
-                    
-                    //Sprites
-                    /*if(state.Equals(StateStep.ICE)){
-                    moveAnimator.speed = 0;
-                    }else{
-                        moveAnimator.speed = 1;
-                    }*/
+                    PlayAudio(iceRoll);
                 }
                 else if (Input.GetKeyDown(KeyCode.D))
                 {
@@ -85,16 +70,9 @@ public class PlayerIce : MonoBehaviour
                     slicing = true;
                     direction = Vector3.right;
                     if(!movingRight){
-                        //rotationAnimator.Play("RotateToRight");
                         movingRight = true;
                     }
-                    
-                    //Sprites
-                    /*if(state.Equals(StateStep.ICE)){
-                    moveAnimator.speed = 0;
-                    }else{
-                        moveAnimator.speed = 1;
-                    }*/
+                    PlayAudio(iceRoll);
                 } 
 
                 
@@ -113,7 +91,13 @@ public class PlayerIce : MonoBehaviour
                             transform.position = new Vector3(lastFloor.position.x, transform.position.y, lastFloor.position.z);
                             GetComponent<Rigidbody>().velocity = Vector3.zero;
                             slicing = false;     
-                            direction = Vector3.zero;            
+                            direction = Vector3.zero;
+                            if(lastFloor.CompareTag("Snow")){
+                                PlayAudio(snowFloor);   
+                            }else{
+                                PlayAudio(hitSound);   
+                            }
+                                     
                         } else if (hit.collider.CompareTag("Snow"))
                         {
                             lastFloor = hit.collider.transform;
@@ -125,8 +109,8 @@ public class PlayerIce : MonoBehaviour
                                 snowStepped.GetComponent<BoxCollider>().enabled = true;
                             }
                             snowStepped = hit.collider.transform;
-                            snowStepped.GetComponent<BoxCollider>().enabled = false;    
-                            //moveAnimator.speed = 0;    
+                            snowStepped.GetComponent<BoxCollider>().enabled = false;     
+                            PlayAudio(snowFloor);    
                         } 
                         else if (hit.collider.CompareTag("Ice"))
                         {
@@ -134,7 +118,6 @@ public class PlayerIce : MonoBehaviour
                             if(snowStepped){
                                 snowStepped.GetComponent<BoxCollider>().enabled = true;
                             }
-                            //moveAnimator.speed = 0;
                         }                  
                         else if (hit.collider.CompareTag("Exit"))
                         {
@@ -154,5 +137,10 @@ public class PlayerIce : MonoBehaviour
         transform.position = new Vector3(spawn.position.x, transform.position.y, spawn.position.z);
         GetComponent<PlayerIce>().finish = false;
 
+    }
+
+    void PlayAudio(AudioClip clip){
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

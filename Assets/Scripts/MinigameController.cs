@@ -19,7 +19,7 @@ public class MinigameController : MonoBehaviour
             case "hockey":
                 GameObject.FindObjectOfType<GameProgress>().hockeyMinigame = true;
                 break;
-            case "map":
+            case "stars":
                 GameObject.FindObjectOfType<GameProgress>().mapMinigame = true;
                 break;
         }

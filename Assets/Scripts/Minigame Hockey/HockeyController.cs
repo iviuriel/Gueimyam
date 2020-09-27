@@ -9,6 +9,11 @@ public class HockeyController : MinigameController
     private int currentLevel;
     public Animator canvasAnimator;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip levelComplete;
+    public AudioClip gameComplete;
+
     void Awake(){
         player = GameObject.FindObjectOfType<PlayerIce>().transform;
     }
@@ -29,8 +34,10 @@ public class HockeyController : MinigameController
         currentLevel++;
         if(currentLevel == levelSpawns.Length){
             canvasAnimator.Play("PhotoHockeyShow");
+            PlayAudio(gameComplete);
         }else{
             canvasAnimator.Play("BlackScreen");
+            PlayAudio(levelComplete);
         }
     }
 
@@ -38,5 +45,10 @@ public class HockeyController : MinigameController
         player.GetComponent<PlayerIce>().SetStartPlayer(levelSpawns[currentLevel]);
         // player.position = new Vector3(levelSpawns[currentLevel].position.x, player.position.y, levelSpawns[currentLevel].position.z);
         // player.GetComponent<PlayerIce>().finish = false;
+    }
+
+    void PlayAudio(AudioClip clip){
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }

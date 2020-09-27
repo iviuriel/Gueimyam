@@ -12,6 +12,7 @@ TagManager:
   - Exit
   - Floor
   - DoorWin
+  - FotoBebes
   layers:
   - Default
   - TransparentFX
