@@ -15,6 +15,13 @@ public class GameProgress : MonoBehaviour
 
     public bool isFirstTime {get; set;}
 
+
+
+    public bool objectSwitch {get; set;}
+    public bool objectMirror {get; set;}
+    public bool objectPanflet {get; set;}
+    public bool objectMobile {get; set;}
+
     //PLAYER INFO
     private PlayerInfo playerInfo;
 
@@ -30,6 +37,11 @@ public class GameProgress : MonoBehaviour
             shellsMinigame = false;
             photosMinigame = false;
             photoBaby = false;
+
+            objectSwitch = false;
+            objectMirror = false;
+            objectPanflet = false;
+            objectMobile = false;
 
             isFirstTime = true;
         }
@@ -50,6 +62,25 @@ public class GameProgress : MonoBehaviour
     }
 
     public PlayerInfo GetPlayerInfo() {return playerInfo;}
+
+    public void SetUsedObject(SecondaryObject.Tag t){
+        switch(t){
+            case SecondaryObject.Tag.ESPEJO:
+                objectMirror = true;
+                break;
+            case SecondaryObject.Tag.SWITCH:
+                objectSwitch = true;
+                break;
+            case SecondaryObject.Tag.MOVIL:
+                objectMobile = true;
+                break;
+            case SecondaryObject.Tag.PANFLETO:
+                objectPanflet = true;
+                break;
+        }
+    } 
+
+    public bool AreAllObjectsUsed(){ return objectMirror && objectSwitch && objectMobile && objectPanflet;}
 }
 
 public class PlayerInfo{

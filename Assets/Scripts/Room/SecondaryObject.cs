@@ -17,6 +17,15 @@ public class SecondaryObject : BasicInteraction
 
     private bool activated;
     private PlayerMovement pMovementRef;
+
+    public Tag tagName;
+
+    public enum Tag{
+        SWITCH,
+        MOVIL,
+        PANFLETO,
+        ESPEJO
+    }
     public override void Interact(GameObject sender){
         if(!activated){
             DisplayObject();
@@ -67,7 +76,7 @@ public class SecondaryObject : BasicInteraction
             textCoroutine = StartCoroutine("AddText");
         }
         if(objectToShow){
-            objectAnimator.transform.GetChild(0).GetComponent<Image>().sprite = objectToShow;
+            objectAnimator.transform.GetChild(1).GetComponent<Image>().sprite = objectToShow;
             objectAnimator.Play("ShowObject");
         }
         activated = true;
@@ -94,7 +103,8 @@ public class SecondaryObject : BasicInteraction
 
     IEnumerator UsedDelay(){
         yield return new WaitForSeconds(0.2f);
-        usedOnce = true;
+        FindObjectOfType<GameProgress>().SetUsedObject(tagName);
+        //usedOnce = true;
     }
 
     public void SetUIText(Text t){uiText = t;}

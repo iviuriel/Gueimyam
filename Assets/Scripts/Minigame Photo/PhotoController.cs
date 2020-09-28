@@ -30,6 +30,9 @@ public class PhotoController : MinigameController
             completeAudioSource.Play();
             GetComponent<Animator>().Play("ShowCompletePhoto");
             endGame = true;
+            foreach(PhotoPiece p in photoPieces){
+                p.enabled = false;
+            }
         }
     }
 }

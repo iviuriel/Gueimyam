@@ -6981,7 +6981,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enable: 1
   displayText: "A veces por las noches me acuerdo de cuando haciamos fiestas de pijamas
-    y no sabes como hecho de menos esas noches de pelis y hacer el tonto\u2026 "
+    y no sabes como echo de menos esas noches de pelis y hacer el tonto\u2026 "
   uiText: {fileID: 1748685728}
   textAnimator: {fileID: 917604782}
 --- !u!4 &391187230
@@ -9394,7 +9394,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c6f441a6d9106fb4ca5499e29bb0099c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.72
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9489,7 +9489,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

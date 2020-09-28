@@ -40,6 +40,7 @@ public class RoomController : MonoBehaviour
             StartCoroutine(DelayInitialClick());
         }else{
             titleObject.gameObject.SetActive(false);
+            SetEnabledScripts(true);
         }
     }
 
@@ -75,7 +76,12 @@ public class RoomController : MonoBehaviour
             contador++;
         }
 
-        float angles = (100 / 4) * contador;
+        float angles;
+        if(contador < 4){
+            angles = 10 * contador;
+        }else{
+            angles = 100;
+        }
         doorObject.localRotation = Quaternion.Euler(-90f, 0f, -angles);
 
         if(contador == 4){
@@ -131,27 +137,13 @@ public class RoomController : MonoBehaviour
     }
 
     void CheckObjectsUsed(){
-        SecondaryObject[] objects = GameObject.FindObjectsOfType<SecondaryObject>();
+        if(gp.AreAllObjectsUsed()){
 
-        //Check objetos usados, si alguno no está usado return
-        foreach(SecondaryObject s in objects){
-            if(s.gameObject.CompareTag("FotoBebes")){
-                continue;
-            }
-            if(!s.IsUsedOnce()){
-                return;
-            }
+            gp.photoBaby = true;
+            photoBbs.Interact(FindObjectOfType<PlayerMovement>().gameObject);
+
+            UpdateCorcho();
         }
-
-        //Si algun nivel no se ha jugado return
-        if(!gp.hockeyMinigame || !gp.shellsMinigame || !gp.photosMinigame || !gp.mapMinigame ){
-            return;
-        }
-
-        gp.photoBaby = true;
-        photoBbs.Interact(FindObjectOfType<PlayerMovement>().gameObject);
-
-        UpdateCorcho();
     }
 
     IEnumerator ActivateScripts(){
@@ -185,14 +177,6 @@ public class RoomController : MonoBehaviour
 
     public void EndGame(){
         SetEnabledScripts(false);
-        endObject.Play("EndGame");
-
-        #if UNITY_STANDALONE_WIN
-        StartCoroutine(Quit());
-        #endif        
-    }
-
-    IEnumerator Quit(){
-        yield return new WaitForSeconds(5f);
+        endObject.Play("EndGame");      
     }
 }

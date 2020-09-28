@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CanvasStarsController : MonoBehaviour
 {
-    public void PlaceCamera(){
+    public void PlacePlayer(){
         //GameObject.FindObjectOfType<HockeyController>().PlacePlayer();
     }
 

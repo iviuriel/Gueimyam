@@ -6,22 +6,23 @@ public class PlayerSensor : MonoBehaviour
 {
     private List<GameObject> gameObjectsFound;
     private GameObject nearestGameObject;
-
-    private LineRenderer lineRenderer;
-
     public Vector3 lineOrigin;
 
     private Animator cartelAnimator;
 
-    private bool isDetecting;
+    public bool isDetecting;
 
     void Awake(){
-        lineRenderer = GetComponent<LineRenderer>();
         cartelAnimator = transform.parent.GetChild(2).GetChild(2).GetComponent<Animator>();
+        
     }
     void Start(){
         gameObjectsFound = new List<GameObject>();
-        isDetecting = false;
+        if(GameObject.FindObjectOfType<GameProgress>().isFirstTime){
+            isDetecting = false;
+        }else{
+            isDetecting = true;
+        }
         
     }
 
